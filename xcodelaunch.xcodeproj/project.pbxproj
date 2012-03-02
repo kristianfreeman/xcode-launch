@@ -13,21 +13,8 @@
 		488788F81500A3BB00277968 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 488788F61500A3BB00277968 /* Credits.rtf */; };
 		488788FB1500A3BB00277968 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 488788FA1500A3BB00277968 /* AppDelegate.m */; };
 		488788FE1500A3BC00277968 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 488788FC1500A3BC00277968 /* MainMenu.xib */; };
-		488789061500A3BC00277968 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488789051500A3BC00277968 /* SenTestingKit.framework */; };
-		488789071500A3BC00277968 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488788E71500A3BB00277968 /* Cocoa.framework */; };
-		4887890F1500A3BC00277968 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4887890D1500A3BC00277968 /* InfoPlist.strings */; };
-		488789121500A3BC00277968 /* xcodelaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 488789111500A3BC00277968 /* xcodelaunchTests.m */; };
+		4887891C1500AC5F00277968 /* Xcode.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4887891B1500AC5F00277968 /* Xcode.icns */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		488789081500A3BC00277968 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 488788DA1500A3BB00277968 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 488788E21500A3BB00277968;
-			remoteInfo = xcodelaunch;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		488788E31500A3BB00277968 /* xcodelaunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xcodelaunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,20 +22,20 @@
 		488788EA1500A3BB00277968 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		488788EB1500A3BB00277968 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		488788EC1500A3BB00277968 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		488788EF1500A3BB00277968 /* xcodelaunch-Info.plist */ = {isa = PBXFileReference; path = "xcodelaunch-Info.plist"; sourceTree = "<group>"; };
+		488788EF1500A3BB00277968 /* xcodelaunch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "xcodelaunch-Info.plist"; sourceTree = "<group>"; };
 		488788F11500A3BB00277968 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		488788F31500A3BB00277968 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		488788F51500A3BB00277968 /* xcodelaunch-Prefix.pch */ = {isa = PBXFileReference; path = "xcodelaunch-Prefix.pch"; sourceTree = "<group>"; };
+		488788F51500A3BB00277968 /* xcodelaunch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "xcodelaunch-Prefix.pch"; sourceTree = "<group>"; };
 		488788F71500A3BB00277968 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		488788F91500A3BB00277968 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		488788F91500A3BB00277968 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		488788FA1500A3BB00277968 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		488788FD1500A3BC00277968 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		488789041500A3BC00277968 /* xcodelaunchTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xcodelaunchTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		488789051500A3BC00277968 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		4887890C1500A3BC00277968 /* xcodelaunchTests-Info.plist */ = {isa = PBXFileReference; path = "xcodelaunchTests-Info.plist"; sourceTree = "<group>"; };
+		4887890C1500A3BC00277968 /* xcodelaunchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "xcodelaunchTests-Info.plist"; sourceTree = "<group>"; };
 		4887890E1500A3BC00277968 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		488789101500A3BC00277968 /* xcodelaunchTests.h */ = {isa = PBXFileReference; path = xcodelaunchTests.h; sourceTree = "<group>"; };
+		488789101500A3BC00277968 /* xcodelaunchTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xcodelaunchTests.h; sourceTree = "<group>"; };
 		488789111500A3BC00277968 /* xcodelaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xcodelaunchTests.m; sourceTree = "<group>"; };
+		4887891B1500AC5F00277968 /* Xcode.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Xcode.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,21 +47,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		488789001500A3BC00277968 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				488789061500A3BC00277968 /* SenTestingKit.framework in Frameworks */,
-				488789071500A3BC00277968 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		488788D81500A3BB00277968 = {
 			isa = PBXGroup;
 			children = (
+				4887891B1500AC5F00277968 /* Xcode.icns */,
 				488788ED1500A3BB00277968 /* xcodelaunch */,
 				4887890A1500A3BC00277968 /* xcodelaunchTests */,
 				488788E61500A3BB00277968 /* Frameworks */,
@@ -86,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				488788E31500A3BB00277968 /* xcodelaunch.app */,
-				488789041500A3BC00277968 /* xcodelaunchTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,25 +151,6 @@
 			productReference = 488788E31500A3BB00277968 /* xcodelaunch.app */;
 			productType = "com.apple.product-type.application";
 		};
-		488789031500A3BC00277968 /* xcodelaunchTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 488789181500A3BC00277968 /* Build configuration list for PBXNativeTarget "xcodelaunchTests" */;
-			buildPhases = (
-				488788FF1500A3BC00277968 /* Sources */,
-				488789001500A3BC00277968 /* Frameworks */,
-				488789011500A3BC00277968 /* Resources */,
-				488789021500A3BC00277968 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				488789091500A3BC00277968 /* PBXTargetDependency */,
-			);
-			name = xcodelaunchTests;
-			productName = xcodelaunchTests;
-			productReference = 488789041500A3BC00277968 /* xcodelaunchTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -214,7 +173,6 @@
 			projectRoot = "";
 			targets = (
 				488788E21500A3BB00277968 /* xcodelaunch */,
-				488789031500A3BC00277968 /* xcodelaunchTests */,
 			);
 		};
 /* End PBXProject section */
@@ -227,34 +185,11 @@
 				488788F21500A3BB00277968 /* InfoPlist.strings in Resources */,
 				488788F81500A3BB00277968 /* Credits.rtf in Resources */,
 				488788FE1500A3BC00277968 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		488789011500A3BC00277968 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4887890F1500A3BC00277968 /* InfoPlist.strings in Resources */,
+				4887891C1500AC5F00277968 /* Xcode.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		488789021500A3BC00277968 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		488788DF1500A3BB00277968 /* Sources */ = {
@@ -266,23 +201,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		488788FF1500A3BC00277968 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				488789121500A3BC00277968 /* xcodelaunchTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		488789091500A3BC00277968 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 488788E21500A3BB00277968 /* xcodelaunch */;
-			targetProxy = 488789081500A3BC00277968 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		488788F01500A3BB00277968 /* InfoPlist.strings */ = {
@@ -389,34 +308,6 @@
 			};
 			name = Release;
 		};
-		488789191500A3BC00277968 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/xcodelaunch.app/Contents/MacOS/xcodelaunch";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "xcodelaunch/xcodelaunch-Prefix.pch";
-				INFOPLIST_FILE = "xcodelaunchTests/xcodelaunchTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		4887891A1500A3BC00277968 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/xcodelaunch.app/Contents/MacOS/xcodelaunch";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "xcodelaunch/xcodelaunch-Prefix.pch";
-				INFOPLIST_FILE = "xcodelaunchTests/xcodelaunchTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -434,14 +325,6 @@
 			buildConfigurations = (
 				488789161500A3BC00277968 /* Debug */,
 				488789171500A3BC00277968 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		488789181500A3BC00277968 /* Build configuration list for PBXNativeTarget "xcodelaunchTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				488789191500A3BC00277968 /* Debug */,
-				4887891A1500A3BC00277968 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
