@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04708DFD1502029200CFAD7A /* JLStatusBarIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 04708DFC1502022400CFAD7A /* JLStatusBarIcon.m */; };
+		04708DFF1502044A00CFAD7A /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04708DFE1502044900CFAD7A /* PopoverViewController.xib */; };
+		04708E021502062500CFAD7A /* JLPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04708E011502062500CFAD7A /* JLPopoverView.m */; };
+		04708E0915020B3A00CFAD7A /* JLPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04708E0815020B3A00CFAD7A /* JLPopoverViewController.m */; };
 		488788E81500A3BB00277968 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488788E71500A3BB00277968 /* Cocoa.framework */; };
 		488788F21500A3BB00277968 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 488788F01500A3BB00277968 /* InfoPlist.strings */; };
 		488788F41500A3BB00277968 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 488788F31500A3BB00277968 /* main.m */; };
@@ -17,6 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04708DFB1502022400CFAD7A /* JLStatusBarIcon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLStatusBarIcon.h; sourceTree = "<group>"; };
+		04708DFC1502022400CFAD7A /* JLStatusBarIcon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLStatusBarIcon.m; sourceTree = "<group>"; };
+		04708DFE1502044900CFAD7A /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
+		04708E001502062500CFAD7A /* JLPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLPopoverView.h; sourceTree = "<group>"; };
+		04708E011502062500CFAD7A /* JLPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLPopoverView.m; sourceTree = "<group>"; };
+		04708E0715020B3A00CFAD7A /* JLPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLPopoverViewController.h; sourceTree = "<group>"; };
+		04708E0815020B3A00CFAD7A /* JLPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLPopoverViewController.m; sourceTree = "<group>"; };
+		04708E0A150210BA00CFAD7A /* JLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLConstants.h; sourceTree = "<group>"; };
 		488788E31500A3BB00277968 /* xcodelaunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xcodelaunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		488788E71500A3BB00277968 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		488788EA1500A3BB00277968 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -95,6 +107,14 @@
 				488788F91500A3BB00277968 /* AppDelegate.h */,
 				488788FA1500A3BB00277968 /* AppDelegate.m */,
 				488788FC1500A3BC00277968 /* MainMenu.xib */,
+				04708DFB1502022400CFAD7A /* JLStatusBarIcon.h */,
+				04708DFC1502022400CFAD7A /* JLStatusBarIcon.m */,
+				04708E0715020B3A00CFAD7A /* JLPopoverViewController.h */,
+				04708E0815020B3A00CFAD7A /* JLPopoverViewController.m */,
+				04708DFE1502044900CFAD7A /* PopoverViewController.xib */,
+				04708E001502062500CFAD7A /* JLPopoverView.h */,
+				04708E011502062500CFAD7A /* JLPopoverView.m */,
+				04708E0A150210BA00CFAD7A /* JLConstants.h */,
 				488788EE1500A3BB00277968 /* Supporting Files */,
 			);
 			path = xcodelaunch;
@@ -186,6 +206,7 @@
 				488788F81500A3BB00277968 /* Credits.rtf in Resources */,
 				488788FE1500A3BC00277968 /* MainMenu.xib in Resources */,
 				4887891C1500AC5F00277968 /* Xcode.icns in Resources */,
+				04708DFF1502044A00CFAD7A /* PopoverViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +219,9 @@
 			files = (
 				488788F41500A3BB00277968 /* main.m in Sources */,
 				488788FB1500A3BB00277968 /* AppDelegate.m in Sources */,
+				04708DFD1502029200CFAD7A /* JLStatusBarIcon.m in Sources */,
+				04708E021502062500CFAD7A /* JLPopoverView.m in Sources */,
+				04708E0915020B3A00CFAD7A /* JLPopoverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +313,7 @@
 		488789161500A3BC00277968 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xcodelaunch/xcodelaunch-Prefix.pch";
 				INFOPLIST_FILE = "xcodelaunch/xcodelaunch-Info.plist";
@@ -300,6 +325,7 @@
 		488789171500A3BC00277968 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xcodelaunch/xcodelaunch-Prefix.pch";
 				INFOPLIST_FILE = "xcodelaunch/xcodelaunch-Info.plist";
@@ -327,6 +353,7 @@
 				488789171500A3BC00277968 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
