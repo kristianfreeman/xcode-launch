@@ -28,6 +28,8 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     [AppDelegate setupDefaults];
+    ProcessSerialNumber psn = { 0, kCurrentProcess };
+    TransformProcessType(&psn, [[NSUserDefaults standardUserDefaults] boolForKey:@"DockIconIsHidden"]?kProcessTransformToUIElementApplication:kProcessTransformToForegroundApplication);
     if (![[NSUserDefaults standardUserDefaults] boolForKey:kUserDeclinedLoginItem]) {
         NSAlert *alert = [NSAlert alertWithMessageText:@"Xcode Launcher" defaultButton:@"Okay" alternateButton:nil otherButton:@"Cancel" informativeTextWithFormat:@"Open Xcode Launcher at Login?"];
         
@@ -55,11 +57,16 @@
 
 + (void)setupDefaults
 {
-    NSDictionary *userDefaultsValuesDict = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:@"UserDeclinedLoginItem"];
+    NSDictionary *userDefaultsValuesDict = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:
+                                                                                [NSNumber numberWithBool:NO], 
+                                                                                [NSNumber numberWithBool:YES], nil] 
+                                                                       forKeys:[NSArray arrayWithObjects:
+                                                                                @"UserDeclinedLoginItem", 
+                                                                                @"DockIconIsHidden", nil]];
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:userDefaultsValuesDict];
-
-    NSArray *resettableUserDefaultsKeys = [NSArray arrayWithObject:@"UserDeclinedLoginItem"];
+    
+    NSArray *resettableUserDefaultsKeys = [NSArray arrayWithObjects:@"UserDeclinedLoginItem", @"DockIconIsHidden", nil];
     NSDictionary *initialValuesDict = [userDefaultsValuesDict dictionaryWithValuesForKeys:resettableUserDefaultsKeys];
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:initialValuesDict];

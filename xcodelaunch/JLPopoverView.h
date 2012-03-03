@@ -12,9 +12,11 @@
 
 @property (nonatomic, weak) IBOutlet NSButton *production;
 @property (nonatomic, weak) IBOutlet NSButton *development;
+@property (nonatomic, weak) IBOutlet NSButton *toggleDockIcon;
 
 
 - (IBAction)launchProduction:(id)sender;
 - (IBAction)launchDevelopment:(id)sender;
+- (IBAction)toggleDockIcon:(id)sender;
 
 @end
