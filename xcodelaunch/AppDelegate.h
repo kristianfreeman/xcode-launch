@@ -10,13 +10,6 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
-@property (weak) IBOutlet NSButton *Prod;
-@property (weak) IBOutlet NSButton *Dev;
-@property (weak) IBOutlet NSTextField *prodLoc;
-@property (weak) IBOutlet NSTextField *devLoc;
-
-- (IBAction)chooseDev:(id)sender;
-- (IBAction)chooseProd:(id)sender;
+@property (nonatomic, strong) NSStatusItem *statusBarItem;
 
 @end
