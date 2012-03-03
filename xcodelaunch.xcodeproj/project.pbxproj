@@ -313,7 +313,7 @@
 		488789161500A3BC00277968 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xcodelaunch/xcodelaunch-Prefix.pch";
 				INFOPLIST_FILE = "xcodelaunch/xcodelaunch-Info.plist";
@@ -325,7 +325,7 @@
 		488789171500A3BC00277968 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xcodelaunch/xcodelaunch-Prefix.pch";
 				INFOPLIST_FILE = "xcodelaunch/xcodelaunch-Info.plist";
