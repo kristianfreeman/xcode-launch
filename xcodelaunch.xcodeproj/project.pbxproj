@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0430B92B1502D40400E5EEA0 /* JLXcodeLaunchDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430B92A1502D40400E5EEA0 /* JLXcodeLaunchDispatcher.m */; };
 		04708DFD1502029200CFAD7A /* JLStatusBarIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 04708DFC1502022400CFAD7A /* JLStatusBarIcon.m */; };
 		04708DFF1502044A00CFAD7A /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04708DFE1502044900CFAD7A /* PopoverViewController.xib */; };
 		04708E021502062500CFAD7A /* JLPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04708E011502062500CFAD7A /* JLPopoverView.m */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0430B9291502D40300E5EEA0 /* JLXcodeLaunchDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLXcodeLaunchDispatcher.h; sourceTree = "<group>"; };
+		0430B92A1502D40400E5EEA0 /* JLXcodeLaunchDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLXcodeLaunchDispatcher.m; sourceTree = "<group>"; };
 		04708DFB1502022400CFAD7A /* JLStatusBarIcon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLStatusBarIcon.h; sourceTree = "<group>"; };
 		04708DFC1502022400CFAD7A /* JLStatusBarIcon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLStatusBarIcon.m; sourceTree = "<group>"; };
 		04708DFE1502044900CFAD7A /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				04708DFE1502044900CFAD7A /* PopoverViewController.xib */,
 				04708E001502062500CFAD7A /* JLPopoverView.h */,
 				04708E011502062500CFAD7A /* JLPopoverView.m */,
+				0430B9291502D40300E5EEA0 /* JLXcodeLaunchDispatcher.h */,
+				0430B92A1502D40400E5EEA0 /* JLXcodeLaunchDispatcher.m */,
 				04708E0A150210BA00CFAD7A /* JLConstants.h */,
 				488788EE1500A3BB00277968 /* Supporting Files */,
 			);
@@ -222,6 +227,7 @@
 				04708DFD1502029200CFAD7A /* JLStatusBarIcon.m in Sources */,
 				04708E021502062500CFAD7A /* JLPopoverView.m in Sources */,
 				04708E0915020B3A00CFAD7A /* JLPopoverViewController.m in Sources */,
+				0430B92B1502D40400E5EEA0 /* JLXcodeLaunchDispatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

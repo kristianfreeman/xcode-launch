@@ -8,13 +8,9 @@
 
 #import "JLPopoverView.h"
 
+#import "JLXcodeLaunchDispatcher.h"
+
 #import "JLConstants.h"
-
-#define kProductionMajorVersion 5
-#define kProductionMinorVersion 0
-
-#define kDevelopmentMajorVersion 5
-#define kDevelopmentMinorVersion 1
 
 @interface JLPopoverView ()
 
@@ -31,8 +27,8 @@
 
 - (void)awakeFromNib
 {
-    [[self production] setTitle:[NSString stringWithFormat:@"Production (%i.%i)", kProductionMajorVersion, kProductionMinorVersion]];
-    [[self development] setTitle:[NSString stringWithFormat:@"Development (%i.%i)", kDevelopmentMajorVersion, kDevelopmentMinorVersion]];
+    [[self production] setTitle:[NSString stringWithFormat:@"Production (%@)", JLProductionVersion]];
+    [[self development] setTitle:[NSString stringWithFormat:@"Development (%@)", JLDevelopmentVersion]];
     
     [self setToggleButtonText];
     
@@ -48,16 +44,12 @@
 
 - (void)launchProduction:(id)sender
 {    
-    [[NSWorkspace sharedWorkspace] launchApplication:JLProductionPath];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:JLXcodeWasLaunched object:nil];
+    [JLXcodeLaunchDispatcher launchProduction];
 }
 
 - (void)launchDevelopment:(id)sender
 {
-    [[NSWorkspace sharedWorkspace] launchApplication:JLDevelopmentPath];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:JLXcodeWasLaunched object:nil];
+    [JLXcodeLaunchDispatcher launchDevelopment];
 }
 
 - (void)toggleDockIcon:(id)sender

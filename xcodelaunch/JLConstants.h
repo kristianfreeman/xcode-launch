@@ -13,3 +13,6 @@ static NSString *const JLXcodeWasLaunched = @"JLXcodeWasLaunched";
 static NSString *const JLProductionPath = @"/Developer/Applications/Xcode.app";
 
 static NSString *const JLDevelopmentPath = @"/Applications/Xcode.app";
+
+static NSString *const JLProductionVersion = @"5.0";
+static NSString *const JLDevelopmentVersion = @"5.1";

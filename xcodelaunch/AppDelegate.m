@@ -10,6 +10,10 @@
 
 #import "JLStatusBarIcon.h"
 
+#import "JLConstants.h"
+
+#import "JLXcodeLaunchDispatcher.h"
+
 #define kUserDeclinedLoginItem @"UserDeclinedLoginItem"
 
 @interface AppDelegate ()
@@ -24,12 +28,21 @@
 @implementation AppDelegate
 
 @synthesize statusBarItem = _statusBarItem;
+@synthesize productionMenuItem = _productionMenuItem;
+@synthesize developmentMenuItem = _developmentMenuItem;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     [AppDelegate setupDefaults];
     ProcessSerialNumber psn = { 0, kCurrentProcess };
     TransformProcessType(&psn, [[NSUserDefaults standardUserDefaults] boolForKey:@"DockIconIsHidden"]?kProcessTransformToUIElementApplication:kProcessTransformToForegroundApplication);
+    
+    [[self productionMenuItem] setTitle:[NSString stringWithFormat:@"Production (%@)", JLProductionVersion]];
+    [[self developmentMenuItem] setTitle:[NSString stringWithFormat:@"Development (%@)", JLDevelopmentVersion]];
+    
+    [[self productionMenuItem] setEnabled:YES];
+    [[self developmentMenuItem] setEnabled:YES];
+    
     if (![[NSUserDefaults standardUserDefaults] boolForKey:kUserDeclinedLoginItem]) {
         NSAlert *alert = [NSAlert alertWithMessageText:@"Xcode Launcher" defaultButton:@"Okay" alternateButton:nil otherButton:@"Cancel" informativeTextWithFormat:@"Open Xcode Launcher at Login?"];
         
@@ -53,6 +66,16 @@
     JLStatusBarIcon *statusBarIcon = [[JLStatusBarIcon alloc] initWithFrame:NSMakeRect(0, 0, thickness, thickness)];
     [self.statusBarItem setView:statusBarIcon];
     [self.statusBarItem setHighlightMode:YES]; 
+}
+
+- (void)launchProduction:(id)sender
+{
+    [JLXcodeLaunchDispatcher launchProduction];
+}
+
+- (void)launchDevelopment:(id)sender
+{
+    [JLXcodeLaunchDispatcher launchDevelopment];
 }
 
 + (void)setupDefaults

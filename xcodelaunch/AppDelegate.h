@@ -11,5 +11,10 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (nonatomic, strong) NSStatusItem *statusBarItem;
+@property (nonatomic, weak) IBOutlet NSMenuItem *productionMenuItem;
+@property (nonatomic, weak) IBOutlet NSMenuItem *developmentMenuItem;
+
+- (IBAction)launchProduction:(id)sender;
+- (IBAction)launchDevelopment:(id)sender;
 
 @end
