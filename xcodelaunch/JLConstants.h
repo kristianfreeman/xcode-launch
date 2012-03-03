@@ -9,3 +9,7 @@
 #import <Foundation/Foundation.h>
 
 static NSString *const JLXcodeWasLaunched = @"JLXcodeWasLaunched";
+
+static NSString *const JLProductionPath = @"/Developer/Applications/Xcode.app";
+
+static NSString *const JLDevelopmentPath = @"/Applications/Xcode.app";

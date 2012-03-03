@@ -33,21 +33,15 @@
 }
 
 - (void)launchProduction:(id)sender
-{
-    NSString *appFolder = [[NSString alloc] initWithString:@"/Developer"];
-    NSString *productionXcode = [appFolder stringByAppendingString:@"/Applications/Xcode.app"];
-    
-    [[NSWorkspace sharedWorkspace] launchApplication:productionXcode];
+{    
+    [[NSWorkspace sharedWorkspace] launchApplication:JLProductionPath];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:JLXcodeWasLaunched object:nil];
 }
 
 - (void)launchDevelopment:(id)sender
 {
-    NSString *appFolder = [[NSString alloc] initWithString:@"/Applications"];
-    NSString *developerXcode = [appFolder stringByAppendingString:@"/Xcode.app"];
-
-    [[NSWorkspace sharedWorkspace] launchApplication:developerXcode];
+    [[NSWorkspace sharedWorkspace] launchApplication:JLDevelopmentPath];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:JLXcodeWasLaunched object:nil];
 }
