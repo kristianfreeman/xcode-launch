@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-static NSString *const JLXcodeWasLaunched = @"JLXcodeWasLaunched";
+static NSString *const JLUserDeclinedLoginItemUserDefault = @"JLUserDeclinedLoginItem";
+static NSString *const JLDockIconIsHiddenUserDefault = @"DockIconIsHidden";
+
+static NSString *const JLXcodeWasLaunchedNotification = @"JLXcodeWasLaunchedNotification";
 
 static NSString *const JLProductionPath = @"/Developer/Applications/Xcode.app";
 

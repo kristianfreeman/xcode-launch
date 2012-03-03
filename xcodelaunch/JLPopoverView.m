@@ -39,7 +39,7 @@
 
 - (void)setToggleButtonText
 {
-    [[self toggleDockIcon] setTitle:[NSString stringWithFormat:@"%@ Dock Icon", [[NSUserDefaults standardUserDefaults] boolForKey:@"DockIconIsHidden"]?@"Show":@"Hide"]];
+    [[self toggleDockIcon] setTitle:[NSString stringWithFormat:@"%@ Dock Icon", [[NSUserDefaults standardUserDefaults] boolForKey:JLUserDeclinedLoginItemUserDefault]?@"Show":@"Hide"]];
 }
 
 - (void)launchProduction:(id)sender
@@ -54,13 +54,13 @@
 
 - (void)toggleDockIcon:(id)sender
 {
-    [[NSUserDefaults standardUserDefaults] setBool:![[NSUserDefaults standardUserDefaults] boolForKey:@"DockIconIsHidden"] 
-                                            forKey:@"DockIconIsHidden"];
+    [[NSUserDefaults standardUserDefaults] setBool:![[NSUserDefaults standardUserDefaults] boolForKey:JLUserDeclinedLoginItemUserDefault] 
+                                            forKey:JLUserDeclinedLoginItemUserDefault];
     
     [self setToggleButtonText];
     
     ProcessSerialNumber psn = { 0, kCurrentProcess };
-    TransformProcessType(&psn, [[NSUserDefaults standardUserDefaults] boolForKey:@"DockIconIsHidden"]?kProcessTransformToUIElementApplication:kProcessTransformToForegroundApplication);
+    TransformProcessType(&psn, [[NSUserDefaults standardUserDefaults] boolForKey:JLUserDeclinedLoginItemUserDefault]?kProcessTransformToUIElementApplication:kProcessTransformToForegroundApplication);
 }
 
 

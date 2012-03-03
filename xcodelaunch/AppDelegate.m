@@ -14,8 +14,6 @@
 
 #import "JLXcodeLaunchDispatcher.h"
 
-#define kUserDeclinedLoginItem @"UserDeclinedLoginItem"
-
 @interface AppDelegate ()
 
 + (void)setupDefaults;
@@ -35,7 +33,7 @@
 {
     [AppDelegate setupDefaults];
     ProcessSerialNumber psn = { 0, kCurrentProcess };
-    TransformProcessType(&psn, [[NSUserDefaults standardUserDefaults] boolForKey:@"DockIconIsHidden"]?kProcessTransformToUIElementApplication:kProcessTransformToForegroundApplication);
+    TransformProcessType(&psn, [[NSUserDefaults standardUserDefaults] boolForKey:JLDockIconIsHiddenUserDefault]?kProcessTransformToUIElementApplication:kProcessTransformToForegroundApplication);
     
     [[self productionMenuItem] setTitle:[NSString stringWithFormat:@"Production (%@)", JLProductionVersion]];
     [[self developmentMenuItem] setTitle:[NSString stringWithFormat:@"Development (%@)", JLDevelopmentVersion]];
@@ -43,7 +41,7 @@
     [[self productionMenuItem] setEnabled:YES];
     [[self developmentMenuItem] setEnabled:YES];
     
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:kUserDeclinedLoginItem]) {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:JLUserDeclinedLoginItemUserDefault]) {
         NSAlert *alert = [NSAlert alertWithMessageText:@"Xcode Launcher" defaultButton:@"Okay" alternateButton:nil otherButton:@"Cancel" informativeTextWithFormat:@"Open Xcode Launcher at Login?"];
         
         if ([alert runModal] == NSAlertDefaultReturn) {
@@ -55,7 +53,7 @@
             }
             CFRelease(loginItems);
             
-            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUserDeclinedLoginItem];
+            [[NSUserDefaults standardUserDefaults] setBool:NO forKey:JLUserDeclinedLoginItemUserDefault];
             [[NSUserDefaults standardUserDefaults] synchronize];
         }
     }
@@ -81,15 +79,15 @@
 + (void)setupDefaults
 {
     NSDictionary *userDefaultsValuesDict = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:
-                                                                                [NSNumber numberWithBool:NO], 
+                                                                                [NSNumber numberWithBool:YES], 
                                                                                 [NSNumber numberWithBool:YES], nil] 
                                                                        forKeys:[NSArray arrayWithObjects:
-                                                                                @"UserDeclinedLoginItem", 
-                                                                                @"DockIconIsHidden", nil]];
+                                                                                JLUserDeclinedLoginItemUserDefault, 
+                                                                                JLDockIconIsHiddenUserDefault, nil]];
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:userDefaultsValuesDict];
     
-    NSArray *resettableUserDefaultsKeys = [NSArray arrayWithObjects:@"UserDeclinedLoginItem", @"DockIconIsHidden", nil];
+    NSArray *resettableUserDefaultsKeys = [NSArray arrayWithObjects:JLUserDeclinedLoginItemUserDefault, JLDockIconIsHiddenUserDefault, nil];
     NSDictionary *initialValuesDict = [userDefaultsValuesDict dictionaryWithValuesForKeys:resettableUserDefaultsKeys];
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:initialValuesDict];

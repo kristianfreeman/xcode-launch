@@ -37,7 +37,7 @@
         
         [[NSNotificationCenter defaultCenter] addObserver:self 
                                                  selector:@selector(dismissPopover) 
-                                                     name:JLXcodeWasLaunched 
+                                                     name:JLXcodeWasLaunchedNotification 
                                                    object:nil];
         
         [[NSNotificationCenter defaultCenter] addObserver:self 

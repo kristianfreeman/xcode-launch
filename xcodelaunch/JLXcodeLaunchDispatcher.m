@@ -16,14 +16,14 @@
 {    
     [[NSWorkspace sharedWorkspace] launchApplication:JLProductionPath];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:JLXcodeWasLaunched object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:JLXcodeWasLaunchedNotification object:nil];
 }
 
 + (void)launchDevelopment
 {
     [[NSWorkspace sharedWorkspace] launchApplication:JLDevelopmentPath];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:JLXcodeWasLaunched object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:JLXcodeWasLaunchedNotification object:nil];
 }
 
 @end
