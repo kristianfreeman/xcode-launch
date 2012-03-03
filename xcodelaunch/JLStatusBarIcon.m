@@ -32,7 +32,7 @@
     if (self) {
         [self setPopoverIsOpen:NO];
         [self setStatusBarPopover:[[NSPopover alloc] init]];
-        [self setPopoverViewController:[[JLPopoverViewController alloc] initWithNibName:@"PopoverView" bundle:nil]];
+        [self setPopoverViewController:[[JLPopoverViewController alloc] initWithNibName:@"PopoverViewController" bundle:nil]];
         [[self statusBarPopover] setContentViewController:[self popoverViewController]];
         
         [[NSNotificationCenter defaultCenter] addObserver:self 
