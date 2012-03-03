@@ -10,7 +10,11 @@
 
 #import "JLStatusBarIcon.h"
 
+#define kUserDeclinedLoginItem @"UserDeclinedLoginItem"
+
 @interface AppDelegate ()
+
++ (void)setupDefaults;
 
 - (void)enableLoginItemWithLoginItemsReference:(LSSharedFileListRef)theLoginItemsRefs ForPath:(NSString *)appPath;
 - (BOOL)loginItemExistsWithLoginItemReference:(LSSharedFileListRef)theLoginItemsRefs ForPath:(NSString *)appPath;
@@ -23,24 +27,46 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0);
-    
-    dispatch_async(queue, ^{
-        NSString * appPath = [[NSBundle mainBundle] bundlePath];
+    [AppDelegate setupDefaults];
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:kUserDeclinedLoginItem]) {
+        NSAlert *alert = [NSAlert alertWithMessageText:@"Xcode Launcher" defaultButton:@"Okay" alternateButton:nil otherButton:@"Cancel" informativeTextWithFormat:@"Open Xcode Launcher at Login?"];
         
-        LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
-        if (![self loginItemExistsWithLoginItemReference:loginItems ForPath:appPath]) {
-            [self enableLoginItemWithLoginItemsReference:loginItems ForPath:appPath];
+        if ([alert runModal] == NSAlertDefaultReturn) {
+            NSString * appPath = [[NSBundle mainBundle] bundlePath];
+            
+            LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
+            if (![self loginItemExistsWithLoginItemReference:loginItems ForPath:appPath]) {
+                [self enableLoginItemWithLoginItemsReference:loginItems ForPath:appPath];
+            }
+            CFRelease(loginItems);
+            
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUserDeclinedLoginItem];
+            [[NSUserDefaults standardUserDefaults] synchronize];
         }
-        CFRelease(loginItems);
-    });
-
+    }
+    
+    
     CGFloat thickness = [[NSStatusBar systemStatusBar] thickness];
     _statusBarItem = [[NSStatusBar systemStatusBar] statusItemWithLength:thickness];
     JLStatusBarIcon *statusBarIcon = [[JLStatusBarIcon alloc] initWithFrame:NSMakeRect(0, 0, thickness, thickness)];
     [self.statusBarItem setView:statusBarIcon];
     [self.statusBarItem setHighlightMode:YES]; 
 }
+
++ (void)setupDefaults
+{
+    NSDictionary *userDefaultsValuesDict = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:@"UserDeclinedLoginItem"];
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:userDefaultsValuesDict];
+
+    NSArray *resettableUserDefaultsKeys = [NSArray arrayWithObject:@"UserDeclinedLoginItem"];
+    NSDictionary *initialValuesDict = [userDefaultsValuesDict dictionaryWithValuesForKeys:resettableUserDefaultsKeys];
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:initialValuesDict];
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 
 - (void)enableLoginItemWithLoginItemsReference:(LSSharedFileListRef )theLoginItemsRefs ForPath:(NSString *)appPath {
     // We call LSSharedFileListInsertItemURL to insert the item at the bottom of Login Items list.
