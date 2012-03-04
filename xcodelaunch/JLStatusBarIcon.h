@@ -10,11 +10,8 @@
 
 #import "JLPopoverViewController.h"
 
-/** 
- @abstract The menu bar icon's view.
- 
- @discussion Manages drawing, click events, and popover display/dismissal.
- */
+/** The menu bar icon's view. */
+/** Manages drawing, click events, and popover display/dismissal. */
 @interface JLStatusBarIcon : NSView
 
 @end

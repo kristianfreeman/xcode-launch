@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-/** @abstract A view controller subclass that manages the JLPopoverView view. */
+/** A view controller subclass that manages the JLPopoverView view. */
 @interface JLPopoverViewController : NSViewController
 
 @end

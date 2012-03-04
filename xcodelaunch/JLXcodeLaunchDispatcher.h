@@ -11,6 +11,7 @@
 /** Handles requests to launch versions of Xcode. */
 @interface JLXcodeLaunchDispatcher : NSObject
 
+/** @name Launching Xcode */
 /** Launches the production version of Xcode. */
 + (void)launchProduction;
 /** Launches the development version of Xcode. */

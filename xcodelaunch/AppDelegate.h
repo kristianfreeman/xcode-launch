@@ -11,6 +11,7 @@
 /** The Application's main delegate class. */
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+/** @name Properties */
 /** The item that shows up in the menu bar on the right. */
 @property (nonatomic, strong) NSStatusItem *statusBarItem;
 
@@ -19,6 +20,7 @@
 /** A menu item in the dock. */
 @property (nonatomic, weak) IBOutlet NSMenuItem *developmentMenuItem;
 
+/** @name Launching Xcode */
 /** Launches the production version of Xcode when the productionMenuItem in the dock is clicked. */
 - (IBAction)launchProduction:(id)sender;
 /** Launches the development version of Xcode when the productionMenuItem in the dock is clicked. */
