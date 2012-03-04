@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+/** Handles requests to launch versions of Xcode. */
 @interface JLXcodeLaunchDispatcher : NSObject
 
+/** Launches the production version of Xcode. */
 + (void)launchProduction;
+/** Launches the development version of Xcode. */
 + (void)launchDevelopment;
 
 @end
