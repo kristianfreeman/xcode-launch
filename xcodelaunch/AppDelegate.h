@@ -8,15 +8,22 @@
 
 #import <Cocoa/Cocoa.h>
 
+/** The Application's main delegate class. */
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
-@property (weak) IBOutlet NSButton *Prod;
-@property (weak) IBOutlet NSButton *Dev;
-@property (weak) IBOutlet NSTextField *prodLoc;
-@property (weak) IBOutlet NSTextField *devLoc;
+/** @name Properties */
+/** The item that shows up in the menu bar on the right. */
+@property (nonatomic, strong) NSStatusItem *statusBarItem;
 
-- (IBAction)chooseDev:(id)sender;
-- (IBAction)chooseProd:(id)sender;
+/** A menu item in the dock. */
+@property (nonatomic, weak) IBOutlet NSMenuItem *productionMenuItem;
+/** A menu item in the dock. */
+@property (nonatomic, weak) IBOutlet NSMenuItem *developmentMenuItem;
+
+/** @name Launching Xcode */
+/** Launches the production version of Xcode when the productionMenuItem in the dock is clicked. */
+- (IBAction)launchProduction:(id)sender;
+/** Launches the development version of Xcode when the productionMenuItem in the dock is clicked. */
+- (IBAction)launchDevelopment:(id)sender;
 
 @end
